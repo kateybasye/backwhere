@@ -1,0 +1,18 @@
+<head>
+    <title>Back Where</title>
+</head>
+<body>
+    <h1>Back Where</h1>
+    {{> articles}}
+</body>
+
+<template name="articles">
+  {{#each article}}
+    <article>
+    	<img src="{{cover_photo}}"/><br>
+    	<h1><a href="{{url}}" target="_blank">{{title}}</a></h1>
+    	<p>{{description}}</p>
+    	<p>{{tags}}</p>
+    </article>
+	{{/each}}
+</template>
