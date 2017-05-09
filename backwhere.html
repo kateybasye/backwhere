@@ -5,6 +5,7 @@
     <h1><a href='/'>Back Where</a></h1>
     {{> addArticle}}<br>
     <hr>
+    <hr>
     {{> articles}}
 </body>
 
@@ -46,7 +47,7 @@
   {{#each article}}
     <article>
     	<button class="remove">Remove Article</button>
-    	<img src="{{cover_photo}}"/><br>
+    	<a href="{{url}}" target="_blank"><img src="{{cover_photo}}"/></a><br>
     	<h1><a href="{{url}}" target="_blank">{{title}}</a></h1>
     	<p>{{description}}</p>
     	<p>{{city}}, {{state}}</p>
