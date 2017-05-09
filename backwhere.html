@@ -2,22 +2,42 @@
     <title>Back Where</title>
 </head>
 <body>
-    <h1>Back Where</h1>
+    <h1><a href='/'>Back Where</a></h1>
     {{> addArticle}}<br>
     <hr>
     {{> articles}}
 </body>
 
 <template name="addArticle">
-	<button id="add-article">Add Article</button>
-	<form class={{hiddenClass}}>
+	<form id='add-article'>
     <div>
-        <label for="url">Url:</label>
-        <input type="url" id="url" name="url">
+        <label for="url">url:</label>
+        <input type="text" id="url" name="url">
+    </div>
+    <div>
+        <label for="title">title:</label>
+        <input type="text" id="title" name="title">
+    </div>
+    <div>
+        <label for="description">description:</label>
+        <input type="text" id="description" name="description">
+    </div>
+    <div>
+        <label for="city">city:</label>
+        <input type="city" id="city" name="city">
+        <label for="state">state:</label>
+        <input type="state" id="state" name="state">
+    </div>
+    <div>
+        <label for="cover_photo">cover_photo:</label>
+        <input type="cover_photo" id="cover_photo" name="cover_photo">
+    </div>
+    <div>
+        <label for="tags">tags:</label>
+        <input type="text" id="tags" name="tags">
     </div>
 		<div class="button">
-		  <button type="submit">Save</button>
-		  <button type="cancel">Cancel</button>
+		  <button type="submit" id="btn-save">Save</button>
 		</div>
 	</form>
 </template>
@@ -25,9 +45,11 @@
 <template name="articles">
   {{#each article}}
     <article>
+    	<button class="remove">Remove Article</button>
     	<img src="{{cover_photo}}"/><br>
     	<h1><a href="{{url}}" target="_blank">{{title}}</a></h1>
     	<p>{{description}}</p>
+    	<p>{{city}}, {{state}}</p>
     	<p>{{tags}}</p>
     	<hr>
     </article>

@@ -1,6 +1,10 @@
 button{
-  padding: 2em;
+  padding: 1em;
   font-size: larger;
+}
+
+img{
+	width: 50%;
 }
 
 input {
@@ -8,6 +12,6 @@ input {
   width: 20em;
 }
 
-.hidden{
-	visibility: hidden;
+.remove{
+	float: right;
 }
