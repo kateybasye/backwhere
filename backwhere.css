@@ -1,0 +1,13 @@
+button{
+  padding: 2em;
+  font-size: larger;
+}
+
+input {
+	padding: 1em;
+  width: 20em;
+}
+
+.hidden{
+	visibility: hidden;
+}
